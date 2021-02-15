@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: #696969;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,
+p {
+  color: #2f4f4f;
+  font-weight: 500;
+  opacity: 0.8;
+  margin: 0;
+}
+h3 {
+  color: #696969;
+  font-weight: 600;
+  opacity: 0.8;
+  margin: 2rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+main {
+  font-family: "Roboto Mono", monospace;
+  min-height: 100vh;
+  background: linear-gradient(to right top, #de6262, #ffb88c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    /* 70% behind */ rgba(255, 255, 255, 0.7),
+    /* 30 % inside */ rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  /* to push circles behind glass use higher value of z-index */
+  z-index: 2;
+  /* for blur effect */
+  backdrop-filter: blur(2rem);
+  display: flex;
+}
+
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(
+    to right bottom,
+    /* 80% behind */ rgba(255, 255, 255, 0.8),
+    /* 30 % inside */ rgba(255, 255, 255, 0.3)
+  );
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  top: 5%;
+  right: 15%;
+}
+.circle2 {
+  bottom: 5%;
+  left: 15%;
+}
+.circle1,
+.circle2 {
+  transition: 10s;
+}
+
+.circle1:hover,
+.circle2:hover {
+  background: palevioletred;
+}
+
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    /* 70% behind */ rgba(255, 255, 255, 0.7),
+    /* 30 % inside */ rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+.link {
+  display: flex;
+  margin: 0;
+  padding: 1rem 3rem;
+  align-items: center;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+.projects {
+  flex: 2;
+}
+.pro {
+  background: linear-gradient(to right top, #de6262, #ffb88c);
+  border-radius: 2rem;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+}
+
+.pro img {
+  margin-left: 10px;
+}
+
+.pro h2 {
+  width: 40%;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Projects*/
+
+.status {
+  margin-bottom: 3rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    /* 70% behind */ rgba(255, 255, 255, 0.7),
+    /* 30 % inside */ rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5rem;
+}
+
+.projects {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+}
+
+.projects h1:hover {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  transition: 3s;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  margin: 2rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.63);
+  justify-content: space-between;
+}
+.progress {
+  background: linear-gradient(to right top, #de6262, #ffb88c);
+  width: 100%;
+  height: 25px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(236, 236, 236);
+  position: absolute;
+  left: 60%;
+}
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top, #de6262, #ffb88c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card:hover {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: #3b342f;
+  transition: 3s;
+}
+.Myavatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.avatar {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
